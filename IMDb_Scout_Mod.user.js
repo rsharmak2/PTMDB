@@ -2580,6 +2580,12 @@ var private_sites = [
       'matchRegex': /fa-circle text-red/,
       'positiveMatch': true,
       'both': true},
+  {   'name': 'HDSpace',
+      'icon': 'data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgBAMAAACBVGfHAAAAMFBMVEVsbHAAAABgYmROUFJISko8PD5UVFhaWlwmJiZ8fICMjI7k5OSYnJzGxsawsLSgpKQGvV+EAAAB10lEQVQozzXMTWsTQQDG8ccNNuzJDhJIoYfpICYpgtoZNh6F3RXqyaQd6H3CbI5tIrvoydQUepIIKjXmIAHBBGk/wJKeRDDG3jUkOfuCgujB4sHZiM9p5sd/BsLlXHGnLrjnSSk3IbhwlaM5r3ueLysSiovA0SqnhTCFL6G5KAYXNUwwf2IKrlUQ0QVlnvhSguui0gGj1oL4BzrUurofbadD7QlpwAkDXt0L15642q0koIPwbrUZbe1e2zczEAbh5ep9unVlDnubyEWM+mVI+DLZBhijzL/ekkMrVNyXbgLw7nTdWS/lsYrnJWB5q2/WJ6cpd3Q7AQrLa7++Gc8e3eglhQX7gBw9XI6Pz2SKedIEPUv+b+npAXEBc8ruJPfGElayGnmye3XxG3kWDxr3WON8iFIGpQcfybv4mJTzpBzBhOTSDxIPPpCNRjZnYPkF6b3Mjqc/zTe30gnsLLZWModfH5NsmaZrKBGybnd6nbcwG9I2fpEma/dhPwfFudnJd5y2rc6wRWkLdv/LdPwbFoL3XVgU9quTePgHYBfWhrkCYIL+qIU2rFSgom1GMbejKeo8ckJVqzFWwOFg8gnK4Q7nQVCzC6Nx/JlBFIXwuKI5ujqJB132FwxFqUBGZawMAAAAAElFTkSuQmCC',
+      'searchUrl': 'https://hd-space.org/index.php?page=torrents&active=0&options=2&search=%nott%',
+      'loggedOutRegex': /not authorized to view the Torrents!|ERR_SQL_ERR/,
+      'matchRegex': /<td colspan="2" align="center"> <\/td>/,
+      'both': true},
 ];
 
 var chinese_sites = [
