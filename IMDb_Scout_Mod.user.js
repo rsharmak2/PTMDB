@@ -1,7 +1,7 @@
 ﻿// ==UserScript==
 //
 // @name         IMDb Scout Mod
-// @version      1.1.0
+// @version      1.1.1
 // @namespace    https://github.com/rsharmak2/PTMDB
 // @description  Auto search for movie/series on torrent, usenet, ddl, subtitles, streaming, predb and other sites. Adds links to IMDb pages from hundreds various sites. Adds movies/series to Radarr/Sonarr. Adds external ratings from Metacritic, Rotten Tomatoes, Letterboxd, Douban, Allocine, MyAnimeList, AniList. Media Server indicators for Plex, Jellyfin, Emby. Dark theme/style for Reference View. Adds/Removes to/from Trakt's watchlist. Removes ads.
 // @icon         data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAEAAAABABAMAAABYR2ztAAAAMFBMVEUAAAD/AAAcAAA1AABEAABVAAC3AADnAAD2AACFAAClAABlAAB3AADHAACVAADYAABCnXhrAAAD10lEQVRIx73TV4xMURgH8H/OnRmZWe3T7h2sOWaNXu7oJRg9UccuHgTRBatMtAgSg+gJu9q+kFmihcQoD8qLTkK0CIkoy0YJITsRD0rCKTHFrnkSv5e5c88/53znO+fiPwvsvrN038cPNqrG9pJmHkRVnPcpaTlHJY60cfPSpsrzl1LKihrmLvxhCM2i3OHvDx0d+H7e3F6JBv5iZMiJfhFTfPYDMHrMImpwimWWUdSgDQkbno7fFpUPVgh+pHFbZR4SovSctDCM9Hac9IKd9rO8EevtBCkXgY5IMmgquwypP7qqfcp/Tp4KLONDVsWh3RSBB2rnZfit69ocUdqLn2prrRZYM0Jg4JibamKsqe7gfEh5GOAfeYJjVHIPZvil97rcXkMog30byWRwXYRWoxHbzNFHJJpAarO8NdEBBsdCaP3WMJltTmQd4zlnekTq9Z5dgACwAlrpK4BxdV5mvLuspRgMSHbCIFF0iS8MZ5S8oYBYKY7rByC4dDM9uSIUmPOIwxgQBoYeF93auP4qFyPbIVXziWeGTH1EFM57kJo2hqQju6BwIyRf6RmCjdT4JOdiwNgiH/PPD3qoqlsNaXRd+fKtFfECxlZVNVF9SOsgTZEr2TUjJJbyeNX1IZrKIbyGlBABfpQPv2UDrly13LkJXDVhpQ5MhtGwcyF4HKjlU4E8xwB0AvDjd6AGmevZ87EcQRHgcO52e9uNsYELOrAa/Yh81YlmYLQJ5HWyq0+kzQ/DQKEusg6CRI27ryy8nReRS0wsoetkmRwogHSprliCckfEjXG9yAQc74J0WB99vu6DF3i3pMucsXM6tpBbxd2mVJAwXwGogNRBvGRA4jtHKTXkAIwLGCR/mT4Lh75oneQXXP9sAYfGRDCsnw7pX/jRZkU3M44kjw2l5zRIzb4CbZ8dULdL6wbNPZOpK0B6gN1UR1mdoxAaL/GrWiLPL3SEwW9YMTU/d64BtLahAVyucWhj9Mm8ign9IfQaBtd2/GbvCAEBpG5eMcrj2I0ktpKLeaqXQ3Pst42KGIshpdTmQLAeTgFGJ2wvh+tayMOR0n1RZ8B9z13vnOPBnsBq4E1ffgZpPFZHWVpO2cvhjYpOcbBd5TlhpDu5zq9mHGZcVi0y+VFkcFkDdyKJfTt99wEyHSEzDM90KH0nexpwZHJHKYYhjzlwGe0pP/IKfxociaEb7YDbi6KGJY1R2cR76E6NAtXqY4pPH3plLcl8LD7V+cOLUbUWRFZRPTAbVZO3mxK18Xc1ZaAiS8ARJXpZliXAomR94siiiMx8ZBOkXGTlnH0F/9ov1xPtWwEqP9wAAAAASUVORK5CYII=
@@ -2299,7 +2299,7 @@ var private_sites = [
       'matchRegex': />No</,
       'positiveMatch': true,
       'both': true},
- {   'name': 'DC',
+  {   'name': 'DC',
       'icon': 'data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQBAMAAADt3eJSAAAAGFBMVEUAAABESlMiJSoiJSoiJSr+/v58pca90uLSz/MtAAAABXRSTlMA/kB/e7s4J2gAAAA2SURBVAjXY0AARUEgEAEyREOBIBCZYQiSEgIyBMEAyBALDU1LS0SogQEUNaWlQDUIEUw1mAAA8LUL4ehpLh4AAAAASUVORK5CYII=',
       'searchUrl': 'https://digitalcore.club/api/v1/torrents?categories[]=1&categories[]=2&categories[]=3&categories[]=4&categories[]=5&categories[]=6&categories[]=7&dead=false&limit=1&page=search&searchText=%search_string%+%year%',
       'goToUrl': 'https://digitalcore.club/search?search=%search_string%+%year%&cats=1,2,5,6,3,4,7&fc=true',
@@ -2387,7 +2387,7 @@ var private_sites = [
       'matchRegex': /fa-circle text-red/,
       'positiveMatch': true,
       'both': true},
- {   'name': 'TL',
+  {   'name': 'TL',
       'icon': 'data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgBAMAAACBVGfHAAAAGFBMVEUAAAAUJw7///8NuwAbThRea1qVnpPEycMaFYrfAAAAAXRSTlMAQObYZgAAAJxJREFUKM/V0kEKwjAQBdDpDfIx1f2AupZ4gaGC6/QGih7AUO/vzFiNWMR1/ybM4ydkMUQNcIBHgEBEQM8DNF3aAVaIzFudY0rJKsCSmbW9UNBjhPwXLhV0tmwq9OzJbyhPOH3DbXLl96M46nyVycfmAnf5gJY1awUXBbBFHPYOZ4McK6wcMEIDxKIAdAaBrNIWHuAiRFZ5LUREoAdZbkWyP3MLEQAAAABJRU5ErkJggg==',
       'searchUrl': 'https://www.tlgetin.cc/torrents/browse/list/imdbID/%tt%',
       'goToUrl': 'https://www.tlgetin.cc/torrents/browse/index/imdbID/%tt%',
@@ -2445,7 +2445,7 @@ var private_sites = [
       'icon': 'data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADAAAAAwBAMAAAClLOS0AAAAElBMVEVrWER+alWYhXGqmojp5tzJwrfEKH+AAAABmklEQVQ4y72Ti43cMAxErQ5IpYGIRgo4Ce7AbiBa9t9KZkjLiK+AewsbFkfDj4TdfhjZtlLKWnGh+InI0kX0FrBXXjvXjuCdlJTcrqpGFHYKqQgEG4eDLv85+K7j+Jzn6fP345CScScfb4w9jjocDLPj6rJapPGXn9fsbSt/WCRR6Lp/Lu+NO0ajkG1uZffTu0biqplJgRQ05F/bCzNrWo/znF0rvqP1EMiOCXyw4fmU7qPbflBw53x/9RYGhMHQ5VCvbEFCGEZDgpaF0SWs+IUhwBL6cvhkIhF9p3JHOVUteCiQLD7NrGogmWrQwrNStd1arbTsoUDg6Fr3Y0JmawNwcrZqFSP5l7blyNGvyWqfqy9HzE4hbvakQEeHsBvuYxGC3MX761RuIRRU8Ts+Wg7Y02GYZZ1KCoYLQREqDmanoWxMhXg3QtlYQCUcwIZZawpKvAqFneTxcV0gSTgMhqApkSxBhyX0EP4N02HdksYyRZgJPPEKIhX2k7W5BizMpkC7G+VDCggH7d+QOJJXoAjAB3gE+At4lv8AsSV7XCu9ZrEAAAAASUVORK5CYII=',
       'searchUrl': 'https://estone.cc/bongeszo.php?kereses_nev=%search_string%+%year%',
       'matchRegex': /kategoria_torrent/,
-      'loggedOutRegex' : /name="login"/,
+      'loggedOutRegex' : /id='loginForm'|Availability|even in case of login problems/,
       'positiveMatch': true,
       'both': true},
  {    'name': 'IPT',
